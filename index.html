@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main w-full h-screen bg-zinc-900 flex justify-center items-center">
+        <div class="calc w-[25%] h-[72%] bg-zinc-600 rounded-md overflow-hidden">
+            <div class="display">
+                <input class="w-full px-5 py-10 bg-white rounded-md inptdisplay text-2xl text-right font-bold" type="text" value=" ">
+            </div>
+            <div class="btm mt-5">
+                <div class="row1 flex justify-between px-5 mb-5 gap-3">
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value=''">AC</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value = document.querySelector('.inptdisplay').value.toString().slice(0,-1)">DE</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='.'">.</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='/'">/</button>
+                </div>
+                <div class="row2 flex justify-between px-5 mb-5 gap-1">
+                    <button class="px-5 py-3 rounded-md bg-black text-white" onclick="sin();">sin</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white" onclick="cos();">cos</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white" onabort="tan();">tan</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white" onclick="sqrt();">&radic;</button>
+                </div>
+                <div class="row3 flex justify-between px-5 mb-5 gap-[18px]">
+                    <button class="px-5 py-3 rounded-md bg-black text-white" onclick="document.querySelector('.inptdisplay').value+='9'">9</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='8'">8</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='7'">7</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='*'">*</button>
+                </div>
+                <div class="row4 flex justify-between px-5 mb-5 gap-[18px]">
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='6'">6</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='5'">5</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='4'">4</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='+'">+</button>
+                    
+                </div>
+                <div class="row5 flex justify-between px-5 mb-5 gap-[18px]">
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='3'">3</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='2'">2</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='1'">1</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='-'">-</button>
+                    
+                </div>
+                <div class="row6 flex justify-between px-5 mb-5 gap-[18px]">
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='0'">0</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white"onclick="document.querySelector('.inptdisplay').value+='00'">00</button>
+                    <button class="px-5 py-3 rounded-md bg-black text-white" onclick="document.querySelector('.inptdisplay').value = eval(document.querySelector('.inptdisplay').value)">=</button>
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
